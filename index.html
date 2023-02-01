@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Decodificador de texto</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="./assets/src/img/logo-a.svg" alt="Logo da Alura challenge" />
+    </header>
+
+    <main>
+      <section>
+        <form>
+          <textarea
+            name="text_encript"
+            class="mensagem-entrada"
+            cols="40"
+            rows="15"
+            placeholder="Digite seu texto"
+          ></textarea>
+
+          <label for="text_encript" class="information">
+            <img src="./assets/src/img/icon-information.svg" alt="Incone de informação" />
+            <p>Apenas letras minúsculas e sem acento.</p>
+          </label>
+
+          <div class="botton">
+            <button class="criptografar" onclick="btnCriptografar()">Criptografar</button>
+
+            <button class="descriptografar" onclick="btnDescriptografar()">Descriptografar</button>
+          </div>
+        </form>
+      </section>
+
+      <section>
+        <div id="card-container">
+          <div id="card">
+            <img src="./assets/src/img/imagem-texto.svg" alt="Imagem" />
+            <h2 id="card-title">Nenhuma mensagem encontrada</h2>
+            <h3 id="card-sub">
+              Digite um texto que você deseja
+              <p>criptografar ou descriptografar</p>
+            </h3>
+          </div>
+
+          <div id="card-botton-copy">
+            <button class="button-copy">Copiar</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="copyright">
+        <p>&copy; copyright Lucas Oliveira Lima - challenge Decodificador - ONE T4</p>
+      </div>
+    </footer>
+    <script src="/js/scripti.js"></script>
+  </body>
+</html>
