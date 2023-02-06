@@ -1,6 +1,5 @@
 /* Global */
 * {
-  font-family: "Inter", sans-serif;
   font-family: "Satisfy", cursive;
   box-sizing: border-box;
   padding: 0;
@@ -33,24 +32,26 @@ main {
   margin-top: 1.5rem;
 }
 
-.mensagem-entrada {
+.entrada {
   border: none;
   resize: none;
   height: 65vh;
-  outline: none;
   padding: 3rem;
-  font-size: 2rem;
   color: #0a3871;
   border-radius: 24px;
   background-color: transparent;
 }
+textarea {
+  font-size: 2rem;
+}
 
-.mensagem-entrada:focus {
+.entrada:focus {
   border: 2px solid #0a3871;
 }
 
-.mensagem-entrada::placeholder {
+.entrada::placeholder {
   color: #0a3871;
+  text-transform: none;
 }
 
 .information {
@@ -67,6 +68,7 @@ main {
 }
 
 button {
+  flex-direction: row;
   height: 67px;
   border-radius: 24px;
   border: 2px solid #0a3871;
@@ -92,48 +94,37 @@ button {
   width: 50%;
 }
 
-#card-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  padding: 3.5rem;
-  max-width: 30rem;
-  min-width: 22rem;
-  height: 70vh;
-  width: 70vh;
-  resize: none;
-  border: none;
-  border-radius: 24px;
-  background-color: #ffffff;
-  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+textarea:focus {
   outline: none;
+  text-transform: lowercase;
 }
 
-#card-container > div > h2 {
-  font-size: 24px;
-  font-weight: 700;
-  text-align: center;
-  color: #343a40;
-}
-
-#card-container > div > h3 {
-  font-size: 16px;
-  text-align: center;
-  color: #495057;
-  padding-top: 16px;
-  font-weight: 400;
-}
-
-#card-botton-copy {
-  display: flex;
-  align-items: stretch;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin: 5px;
+.saida {
+  border: none;
+  resize: none;
   height: 100%;
   width: 100%;
+  line-height: 100%;
+  text-align: justify;
+  color: #495057;
+  background-color: transparent;
+}
+
+.container-saida {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-start;
+  color: #0a3871;
+  background-color: #ffffff;
+  background-image: url("/assets/src/img/imagem-texto.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  border-radius: 24px;
+  padding: 20px;
+  margin: 40px 40px 0;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  width: 25%;
 }
 
 .button-copy {
@@ -145,7 +136,7 @@ button {
 footer {
   text-align: center;
   background: #0a3871;
-  margin-top: 80px;
+  margin-top: 74px;
 }
 
 .copyright {
