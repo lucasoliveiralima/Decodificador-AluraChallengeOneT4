@@ -5,7 +5,7 @@ const imagemSaida = document.getElementById("imagem");
 // Butão de criptografar
 function btnCriptografar() {
   if (entrada.value == "") {
-    alert("");
+    alert("Digite seu texto para criptografar!");
   } else {
     imagemSaida.style.backgroundImage = "none";
   }
