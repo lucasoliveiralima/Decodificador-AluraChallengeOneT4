@@ -1,38 +1,24 @@
 const entrada = document.querySelector(".entrada");
 const saida = document.querySelector(".saida");
-const imagemTexto = document.getElementById("#imagem");
-
-entrada.focus();
+const imagemSaida = document.getElementById("imagem");
 
 // Butão de criptografar
 function btnCriptografar() {
+  if (entrada.value == "") {
+    alert("");
+  } else {
+    imagemSaida.style.backgroundImage = "none";
+  }
   const stringEncript = encript(entrada.value);
   saida.value = stringEncript;
   entrada.value = "";
 }
 
 // Botão de copiar
-
-
-// função de criptografar o texto
-function encript(textoEncriptado) {
-  let arrayDeString = [
-    ["e", "enter"],
-    ["i", "imes"],
-    ["a", "ai"],
-    ["o", "ober"],
-    ["u", "ufat"],
-  ];
-
-  textoEncriptado = textoEncriptado.toLowerCase();
-
-  for (let i = 0; i < arrayDeString.length; i++) {
-    if (textoEncriptado.includes(arrayDeString[i][0])) {
-      textoEncriptado = textoEncriptado.replaceAll(arrayDeString[i][0], arrayDeString[i][1]);
-    }
-  }
-
-  return textoEncriptado;
+function btnCopiar() {
+  const textoCopiado = saida.value;
+  entrada.value = textoCopiado;
+  saida.value = "";
 }
 
 // botão de descriptografar
@@ -43,21 +29,42 @@ function btnDescriptografar() {
   entrada.focus();
 }
 
-// função de descriptografar o texto
-function descript(textoDescriptografado) {
-  let arrayDeString = [
+// função de criptografar o texto
+function encript(textoEncriptado) {
+  const mapa = new Map([
     ["e", "enter"],
     ["i", "imes"],
     ["a", "ai"],
     ["o", "ober"],
     ["u", "ufat"],
-  ];
+  ]);
+
+  textoEncriptado = textoEncriptado.toLowerCase();
+
+  for (const [key, value] of mapa) {
+    if (textoEncriptado.includes(key)) {
+      textoEncriptado = textoEncriptado.replace(key, value);
+    }
+  }
+
+  return textoEncriptado;
+}
+
+// função de descriptografar o texto
+function descript(textoDescriptografado) {
+  const mapa = new Map([
+    ["enter", "e"],
+    ["imes", "i"],
+    ["ai", "a"],
+    ["ober", "o"],
+    ["ufat", "u"],
+  ]);
 
   textoDescriptografado = textoDescriptografado.toLowerCase();
 
-  for (let i = 0; i < arrayDeString.length; i++) {
-    if (textoDescriptografado.includes(arrayDeString[i][1])) {
-      textoDescriptografado = textoDescriptografado.replaceAll(arrayDeString[i][1], arrayDeString[i][0]);
+  for (const [key, value] of mapa) {
+    if (textoDescriptografado.includes(key)) {
+      textoDescriptografado = textoDescriptografado.replace(key, value);
     }
   }
 

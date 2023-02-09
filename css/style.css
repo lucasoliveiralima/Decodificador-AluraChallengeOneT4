@@ -88,10 +88,22 @@ button {
   width: 50%;
 }
 
+.criptografar:hover {
+  background-color: #d8dfe8;
+  color: #0a3871;
+  transition: 0.5s;
+}
+
 .descriptografar {
   background-color: #d8dfe8;
   color: #0a3871;
   width: 50%;
+}
+
+.descriptografar:hover {
+  background-color: #0a3871;
+  color: #ffffff;
+  transition: 0.5s;
 }
 
 textarea:focus {
@@ -127,9 +139,15 @@ textarea:focus {
   width: 25%;
 }
 
-.button-copy {
+.buttonCopy {
   color: #0a3871;
   background-color: #ffffff;
+}
+
+.buttonCopy:hover {
+  background-color: #0a3871;
+  color: #ffffff;
+  transition: 0.5s;
 }
 
 /* Rodape*/
