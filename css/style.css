@@ -43,6 +43,7 @@ main {
 }
 textarea {
   font-size: 2rem;
+  outline: none;
 }
 
 .entrada:focus {
@@ -108,7 +109,7 @@ button {
 
 textarea:focus {
   outline: none;
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
 }
 
 .saida {
@@ -131,7 +132,7 @@ textarea:focus {
   background-image: url("/assets/img/imagem-texto.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 80%;
+  background-size: 75%;
   border-radius: 24px;
   padding: 20px;
   margin: 40px 40px 0;

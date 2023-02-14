@@ -1,17 +1,18 @@
 const entrada = document.querySelector(".entrada");
 const saida = document.querySelector(".saida");
-const imagemSaida = document.getElementById("imagem");
+const imagemSaida = document.getElementById("imagem-texto");
 
+entrada.focus();
 // Butão de criptografar
 function btnCriptografar() {
   if (entrada.value == "") {
-    alert("Digite seu texto para criptografar!");
+    alert("Digite o texto para ser criptografado!");
   } else {
     imagemSaida.style.backgroundImage = "none";
+    const stringEncript = encript(entrada.value);
+    saida.value = stringEncript;
+    entrada.value = "";
   }
-  const stringEncript = encript(entrada.value);
-  saida.value = stringEncript;
-  entrada.value = "";
 }
 
 // Botão de copiar
