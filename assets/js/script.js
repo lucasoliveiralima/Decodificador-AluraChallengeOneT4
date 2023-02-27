@@ -44,7 +44,7 @@ function encript(textoEncriptado) {
 
   for (const [key, value] of mapa) {
     if (textoEncriptado.includes(key)) {
-      textoEncriptado = textoEncriptado.replace(key, value);
+      textoEncriptado = textoEncriptado.replaceAll(key, value);
     }
   }
 
@@ -65,7 +65,7 @@ function descript(textoDescriptografado) {
 
   for (const [key, value] of mapa) {
     if (textoDescriptografado.includes(key)) {
-      textoDescriptografado = textoDescriptografado.replace(key, value);
+      textoDescriptografado = textoDescriptografado.replaceAll(key, value);
     }
   }
 
