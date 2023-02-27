@@ -7,47 +7,41 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Satisfy&display=swap"
       rel="stylesheet"
     />
-
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-
     <title>Decodificador de texto</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <header>
-      <img class="logo" src="./image/logo-a.svg" alt="Logo da Alura challenge" />
+      <img class="logo" src="./assets/img/logo-a.svg" alt="Logo da Alura challenge" />
     </header>
-
     <main>
       <section>
         <textarea class="entrada" cols="40" rows="15" id="texto" placeholder="Digite seu texto"></textarea>
 
         <label for="text_encript" class="information">
-          <img src="./image/icon-information.svg" alt="Incone de informação" />
+          <img src="./assets/img/icon-information.svg" alt="Incone de informação" />
           <p>Apenas letras minúsculas e sem acento.</p>
         </label>
-
         <div class="botton">
           <button class="criptografar" onclick="btnCriptografar()">Criptografar</button>
 
           <button class="descriptografar" onclick="btnDescriptografar()">Descriptografar</button>
         </div>
       </section>
-
       <section class="container-saida" id="imagem-texto">
-        <textarea cols="20" rows="10" class="saida"  ></textarea>
+        <textarea cols="20" rows="10" class="saida"></textarea>
 
         <button class="buttonCopy" onclick="btnCopiar()">Copiar</button>
       </section>
     </main>
-
     <footer>
       <div class="copyright">
         <p>&copy; copyright Lucas Oliveira Lima - challenge Decodificador - ONE T4</p>
       </div>
     </footer>
-    <script src="./js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
